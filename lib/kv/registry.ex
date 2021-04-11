@@ -20,9 +20,9 @@ defmodule KV.Register do
     end
   end
 
-  def start_link() do
+  def start_link(opts) do
     # returns {:ok, pid} if succesful
-    GenServer.start_link(__MODULE__, %{})
+    GenServer.start_link(__MODULE__, :ok, opts)
     # GenServer.start_link)
   end
 
